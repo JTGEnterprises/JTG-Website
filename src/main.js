@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Load and inject the navbar component
   if (navbar) {
-    fetch("/components/navbar.html")
+    fetch("./components/navbar.html")
       .then(response => response.text())
       .then(data => {
         navbar.innerHTML = data;
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Load and inject the footer component
   if (footer) {
-    fetch("/components/footer.html")
+    fetch("./components/footer.html")
       .then(response => response.text())
       .then(data => {
         footer.innerHTML = data;
