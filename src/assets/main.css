@@ -1,0 +1,81 @@
+/* src/assets/main.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar {
+    width: 100%;
+}
+.hero {
+    background: url('https://unsplash.com/photos/blue-screen-on-computer-screen-2aWVqmjluIQ') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+.footer {
+    background: #0d0d0d;
+    color: white;
+    padding: 20px;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  body {
+    display: block !important;
+    place-items: unset !important;
+  }
+
+  /* Dark mode adjustments */
+  .dark .dark-image-overlay {
+    opacity: 0.7;
+  }
+
+  /* Animation delays */
+  .anim-delay-100 { animation-delay: 100ms; }
+  .anim-delay-200 { animation-delay: 200ms; }
+  .anim-delay-300 { animation-delay: 300ms; }
+  .anim-delay-400 { animation-delay: 400ms; }
+  .anim-delay-500 { animation-delay: 500ms; }
+
+  /* Smooth transitions for dark mode */
+  .transition-colors {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+
+  /* Parallax effect */
+  .parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* Custom shadow */
+  .shadow-custom {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Dark mode detection */
+  @media (prefers-color-scheme: dark) {
+    html:not(.light) {
+      color-scheme: dark;
+    }
+    html:not(.light) body {
+      background-color: #1a202c; /* bg-gray-900 */
+      color: #ffffff; /* text-white */
+    }
+  }
+  .animate-fade-in {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+  }
+  
+  .animate-slide-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }

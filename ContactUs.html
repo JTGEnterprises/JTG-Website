@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | JTG</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="src/assets/main.css">
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-200 flex flex-col min-h-screen">
+  <!-- Header/Navigation -->
+  <div id="navbar"></div>
+  <!-- Hero Section -->
+  <section class="w-full pt-32 pb-12 px-8 bg-gray-50 dark:bg-gray-800/50 relative overflow-hidden">
+    <!-- Decorative elements -->
+    <div class="absolute top-0 left-0 w-64 h-64 bg-blue-500 rounded-full opacity-10 -translate-x-1/2 -translate-y-1/2 animate-pulse-slow"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full opacity-10 translate-x-1/3 translate-y-1/3 animate-pulse-slow"></div>
+    
+    <div class="container mx-auto text-center relative z-10">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white animate-fade-in opacity-0">Contact Us</h1>
+      <p class="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto mb-8 animate-fade-in opacity-0">Reach out today to elevate your business communication.</p>
+      <div class="flex justify-center space-x-4 animate-fade-in opacity-0">
+        <div id="contact-button"></div>        
+        <a href="#learn-more" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-lg transition-colors">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section id="contact-form" class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <!-- Image Card -->
+        <div class="w-full relative z-10 flex items-center justify-center transition-transform duration-700 hover:scale-105">
+          <img src="/src/assets/img/contact-form.png" alt="Customer Support" class="rounded-lg w-full">
+      </div>
+      
+        <!-- Form Card -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+          <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+          <p class="text-gray-600 dark:text-gray-400 mb-6">We'd love to hear from you!</p>
+          <form class="space-y-4">
+            <div>
+              <label class="block text-gray-700 dark:text-gray-300">Name</label>
+              <input type="text" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200">
+            </div>
+            <div>
+              <label class="block text-gray-700 dark:text-gray-300">Email</label>
+              <input type="email" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200">
+            </div>
+            <div>
+              <label class="block text-gray-700 dark:text-gray-300">Message</label>
+              <textarea class="min-h-[120px] w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-200"></textarea>
+            </div>
+            <div>
+              <input type="checkbox" id="terms" class="mr-2">
+              <label for="terms" class="text-gray-700 dark:text-gray-300">Agree to Terms</label>
+            </div>
+            <button type="submit" class="px-6 py-2 bg-blue-600 text-white hover:bg-blue-700 rounded-lg transition-transform duration-300 hover:scale-105">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Info Section -->
+  <section class="py-16 bg-gray-200 dark:bg-gray-800">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <!-- Contact Details Card -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+          <h2 class="text-3xl font-bold mb-4">Contact Details</h2>
+          <p class="text-gray-600 dark:text-gray-400 mb-6">We're here to assist you with any inquiries.</p>
+          <div class="space-y-6">
+            <div class="flex items-center space-x-4">
+              <i class="fas fa-envelope text-blue-600 text-2xl"></i>
+              <div>
+                <h3 class="font-bold">Email</h3>
+                <a href="mailto:support@jtg.com" class="text-blue-600 hover:underline">support@jtg.com</a>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <i class="fas fa-phone text-blue-600 text-2xl"></i>
+              <div>
+                <h3 class="font-bold">Phone</h3>
+                <a href="tel:+254100000000" class="text-blue-600 hover:underline">+254 100 000 000</a>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <i class="fas fa-building text-blue-600 text-2xl"></i>
+              <div>
+                <h3 class="font-bold">Office</h3>
+                <p>Westlands Business Park, Nairobi, Kenya</p>
+                <a href="#" class="text-blue-600 hover:underline">Get Directions <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Map Card -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8168872340505!2d36.80969!3d-1.2674949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f17313ed3a91b%3A0x6f8859e3dc52eef5!2sWestlands%20Business%20Park!5e0!3m2!1sen!2sus!4v1708558201177!5m2!1sen!2sus"
+            class="w-full h-64 border-0 rounded-lg"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer" class="mt-auto"></div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
