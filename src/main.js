@@ -19,55 +19,7 @@ initTheme();
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', initTheme);
 
 // Set up all interactive elements after the DOM loads
-document.addEventListener("DOMContentLoaded", () => {
-  const navbar = document.getElementById("navbar");
-  const footer = document.getElementById("footer");
 
-  // Function to set up navbar functionality
-  function setupNavbarFunctions() {
-    // Mobile menu toggle
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    if (mobileMenuButton && mobileMenu) {
-      mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-    }
-
-    // Mobile dropdown toggle
-    const mobileDropdownButton = document.getElementById('mobile-dropdown-button');
-    const mobileDropdown = document.getElementById('mobile-dropdown');
-
-    if (mobileDropdownButton && mobileDropdown) {
-      mobileDropdownButton.addEventListener('click', () => {
-        mobileDropdown.classList.toggle('hidden');
-      });
-    }
-  }
-
-  // Load and inject the navbar component
-  if (navbar) {
-    fetch("./components/navbar.html")
-      .then(response => response.text())
-      .then(data => {
-        navbar.innerHTML = data;
-        setupNavbarFunctions(); // Ensure navbar scripts work after loading
-      })
-      .catch(error => console.error("Navbar load error:", error));
-  }
-
-  // Load and inject the footer component
-  if (footer) {
-    fetch("./components/footer.html")
-      .then(response => response.text())
-      .then(data => {
-        footer.innerHTML = data;
-      })
-      .catch(error => console.error("Footer load error:", error));
-  }  
-
-});
 
 tailwind.config = {
   darkMode: 'class',
