@@ -3,6 +3,89 @@
 @tailwind components;
 @tailwind utilities;
 
+  /* Printing animation */
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: goldenrod !important; } 
+  }
+
+  .printing-animation {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.1em solid goldenrod; /* Cursor effect */
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+
+  .printing-animation-delay-1 {
+    opacity: 0;
+    animation: fadeIn 1s ease-in 3.5s forwards, typing-loop 3.5s steps(40, end) 6s infinite;
+  }
+
+  .printing-animation-delay-2 {
+    opacity: 0;
+    animation: fadeIn 1s ease-in 4.5s forwards;
+  }
+
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+
+  @keyframes typing-loop {
+    0%, 100% { width: 0; }
+    50% { width: 100%; }
+  }
+
+/* Floating/Bouncing Services */
+.floating-services {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.service-item {
+  position: absolute;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  animation: float 8s ease-in-out infinite;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Space between icon and text */
+}
+
+.service-item i {
+  font-size: 1.5rem; /* Adjust icon size */
+  color: rgba(255, 255, 255, 0.9); /* Icon color */
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(10px) translateX(-10px) rotate(-5deg);
+  }
+  75% {
+    transform: translateY(-10px) translateX(10px) rotate(5deg);
+  }
+}
+
+
+
+
 .navbar {
     width: 100%;
 }
